@@ -1,3 +1,10 @@
 body {
-  background-color: deepskyblue;
-}
+  background-color: grey;
+  color: black;
+  font-family: 'Roboto', sans-serif; }
+
+.container {
+  min-height: 90vh;
+  margin-top: 70px; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwbGljYXRpb24uY3NzIiwic291cmNlcyI6WyJhcHBsaWNhdGlvbi5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBncmV5O1xuICBjb2xvcjogYmxhY2s7XG4gIGZvbnQtZmFtaWx5OiAnUm9ib3RvJywgc2Fucy1zZXJpZjtcbn1cblxuLmNvbnRhaW5lciB7XG4gIG1pbi1oZWlnaHQ6IDkwdmg7XG4gIG1hcmdpbi10b3A6IDcwcHg7XG59XG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsQUFBQSxJQUFJLENBQUM7RUFDSCxnQkFBZ0IsRUFBRSxJQUFJO0VBQ3RCLEtBQUssRUFBRSxLQUFLO0VBQ1osV0FBVyxFQUFFLG9CQUFvQixHQUNsQzs7QUFFRCxBQUFBLFVBQVUsQ0FBQztFQUNULFVBQVUsRUFBRSxJQUFJO0VBQ2hCLFVBQVUsRUFBRSxJQUFJLEdBQ2pCIn0= */

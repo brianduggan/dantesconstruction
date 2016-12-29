@@ -4,7 +4,7 @@ var express     = require('express'),
     bodyParser  = require('body-parser');
 
 require('dotenv').config();
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
