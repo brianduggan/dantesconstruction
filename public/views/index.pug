@@ -19,36 +19,38 @@ html(lang="en", ng-app="DantesApp")
       nav.nav.navbar-default.navbar-fixed-top
         .container-fluid
           .navbar-header
-            a.navbar-brand(ng-click="navigate = 'Home'")
+            a.navbar-brand(ng-click="clickHome()")
               img#logo(src="/img/dantes.png")
-          .collapse.navbar-collapse
+          #dantes-navbar.collapse.navbar-collapse
             ul.nav.navbar-nav
-              li
-                a(ng-click="navigate = 'About'") About
-              li
-                a(ng-click="navigate = 'Estimate'") Estimate
-              li
-                a(ng-click="navigate = 'Contact'") Contact
+              li#about-nav
+                a(ng-click="clickAbout()") About
+              li#estimate-nav
+                a(ng-click="clickEstimate()") Estimate
+              li#contact-nav
+                a(ng-click="clickContact()") Contact
+            .navbar-right
+              p Perfection has no competition
 
 
     .container-fluid.main-container
       #home(ng-if="navigate === 'Home'")
         h2 Dante's Construction
         h3 Perfection has no competition
-        #dantes-carousel.col-md-10
-          .indicator
-            span {{indicator}}
-          .controls
-            span#prev(ng-click="prev()")
-              i.fa.fa-arrow-circle-left(aria-hidden="true")
-            span#next(ng-click="next()")
-              i.fa.fa-arrow-circle-right(aria-hidden="true")
-          .slide(ng-repeat="serv in ourServ" ng-show="$index === carousel")
-            img(src="{{serv.src}}" alt="{{serv.alt}}")
-            .caption
-              h4 {{serv.capHead}}
-              p {{serv.capBody}}
-              p {{$index}}
+        .row.carousel-container
+          #dantes-carousel.col-md-12
+            #indicator
+            .controls
+              span#prev(ng-click="prev()")
+                i.fa.fa-chevron-left(aria-hidden="true")
+              span#next(ng-click="next()")
+                i.fa.fa-chevron-right(aria-hidden="true")
+            .slide(ng-repeat="serv in ourServ" ng-if="$index === carousel")
+              img(src="{{serv.src}}" alt="{{serv.alt}}")
+              .caption
+                h4 {{serv.capHead}}
+                p {{serv.capBody}}
+                p {{$index}}
 
       #about(ng-if="navigate === 'About'")
         h2 About Dante's Construction
@@ -78,7 +80,7 @@ html(lang="en", ng-app="DantesApp")
           .col-md-12
             p With our attention to detail and dedication to delivering the highest quality work possible, you can rest assured knowing that your project is in the hands of an extremely talented, dedicated and knowledgeable construction team. Serving areas throughout New England.
 
-      .row
+      .row.copyright
         .col-md-12
           p 2016 Dante's Construction, LLC. All Rights Reserved.
       //-
