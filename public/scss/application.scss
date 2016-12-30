@@ -1,10 +1,54 @@
+/******** DEFAULT BODY STYLES ********/
+
 body {
   background-color: grey;
   color: black;
   font-family: 'Roboto', sans-serif;
 }
 
-.container {
+/******** HEADER STYLES ********/
+.navbar-header {
+  margin-top: -10px;
+  width: 200px;
+}
+
+#logo {
+  width: 100%;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.nav ul {
+  font-size: 1.4em;
+}
+
+/******** MAIN CONTAINER POSITION ********/
+.main-container {
   min-height: 90vh;
-  margin-top: 70px;
+  margin-top: 80px;
+}
+
+/******** CAROUSEL ********/
+.slide img {
+  max-width: 100%;
+}
+
+// .caption {
+//   position: relative;
+//   bottom: 50px;
+//   min-width: 100%;
+//   background-color: purple;
+//   color: black;
+// }
+
+/******** DEFAULT FORM STYLES ********/
+form label {
+  display: block;
+}
+
+/******** FOOTER ********/
+footer {
+  background-color: black;
+  color: white;
+  min-width: 100%;
 }

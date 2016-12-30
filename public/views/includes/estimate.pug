@@ -1,0 +1,91 @@
+h2 Get a free estimate!
+.estimate-form.container
+  form(ng-submit="sendEstimate()")
+    .row
+      .col-md-4
+        label(for="estimate-first") First Name
+        input(type="text" id="estimate-first" ng-model="estimate.firstname")
+        p Example: Colin
+      .col-md-4
+        label(for="estimate-last") Last Name
+        input(type="text" id="estimate-last" ng-model="estimate.lastname")
+        p Example: Davis
+    .row
+      .col-md-4
+        label(for="estimate-email") Email
+        input(type="text" id="estimate-email" ng-model="estimate.email")
+        p Example: colin@gmail.com
+      .col-md-4
+        label(for="estimate-phone") Phone Number
+        input(type="tel" id="estimate-phone" ng-model="estimate.phone")
+        p Example: (555) 555-5555
+    .row
+      .col-md-4
+        label(for="estimate-street") Address
+        input(type="text" id="estimate-street" ng-model="estimate.street")
+        p Example: 123 Fake Street
+    .row
+      .col-md-4
+        input(type="text" id="estimate-street2" ng-model="estimate.street2")
+        p Example: Apt. 1A
+    .row
+      .col-md-4
+        label(for="estimate-city") City
+        input(type="text" id="estimate-city" ng-model="estimate.city")
+        p Example: Warwick
+    select(ng-model="estimate.state")
+      option(value="") State
+      option(value="RI") RI
+      option(value="MA") MA
+    .row
+      h3 Type of Work
+      .row
+        .col-md-4
+          label() New Construction
+            input(type="checkbox" value="New Construction" ng-model="estimate.type.newconstruction")
+      .row
+        .col-md-4
+          label() Kitchen & Bathroom
+            input(type="checkbox" value="Kitchen & Bathroom" ng-model="estimate.type.kitchbath")
+      .row
+        .col-md-4
+          label() Basement Remodels
+            input(type="checkbox" value="Basement Remodels" ng-model="estimate.type.basement")
+      .row
+        .col-md-4
+          label() Concrete Construction
+            input(type="checkbox" value="Concrete Construction" ng-model="estimate.type.concrete")
+    .row
+      h3 Contact Time
+      .row
+        .col-md-4
+          label() Morning
+            input(type="checkbox" value="Morning" ng-model="estimate.time.morning")
+      .row
+        .col-md-4
+          label() Afternoon
+            input(type="checkbox" value="Afternoon" ng-model="estimate.time.afternoon")
+      .row
+        .col-md-4
+          label() Evening
+            input(type="checkbox" value="Evening" ng-model="estimate.time.evening")
+      .row
+        .col-md-4
+          label() Anytime
+            input(type="checkbox" value="Anytime" ng-model="estimate.time.anytime")
+    .row
+      h3 Project Status
+      .row
+        .col-md-4
+          label() Consultation
+            input(type="checkbox" value="Consultation" ng-model="estimate.status.consultation")
+      .row
+        .col-md-4
+          label() Planning
+            input(type="checkbox" value="Planning" ng-model="estimate.status.planning")
+      .row
+        .col-md-4
+          label() Hiring
+            input(type="checkbox" value="Hiring" ng-model="estimate.status.hiring")
+
+    button(type="submit") Submit Estimate

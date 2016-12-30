@@ -10,6 +10,7 @@ html(lang="en", ng-app="DantesApp")
     link(rel="stylesheet", href="/css/application.css")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js")
     script(src="/js/controllers/mainController.js")
+    script(src="/js/controllers/estimateController.js")
     script(src="/js/main.js")
     title Dante's Construction
 
@@ -18,11 +19,10 @@ html(lang="en", ng-app="DantesApp")
       nav.nav.navbar-default.navbar-fixed-top
         .container-fluid
           .navbar-header
-            a.navbar-brand() Dante's Construction
+            a.navbar-brand(ng-click="navigate = 'Home'")
+              img#logo(src="/img/dantes.png")
           .collapse.navbar-collapse
             ul.nav.navbar-nav
-              li.active
-                a(ng-click="navigate = 'Home'") Home
               li
                 a(ng-click="navigate = 'About'") About
               li
@@ -31,11 +31,11 @@ html(lang="en", ng-app="DantesApp")
                 a(ng-click="navigate = 'Contact'") Contact
 
 
-    .container.main-container
+    .container-fluid.main-container
       #home(ng-if="navigate === 'Home'")
         h2 Dante's Construction
         h3 Perfection has no competition
-        #dantes-carousel
+        #dantes-carousel.col-md-10
           .indicator
             span {{indicator}}
           .controls
@@ -45,20 +45,42 @@ html(lang="en", ng-app="DantesApp")
               i.fa.fa-arrow-circle-right(aria-hidden="true")
           .slide(ng-repeat="serv in ourServ" ng-show="$index === carousel")
             img(src="{{serv.src}}" alt="{{serv.alt}}")
-            h4 {{serv.capHead}}
-            p {{serv.capBody}}
-            p {{$index}}
+            .caption
+              h4 {{serv.capHead}}
+              p {{serv.capBody}}
+              p {{$index}}
 
       #about(ng-if="navigate === 'About'")
         h2 About Dante's Construction
 
-      #estimate(ng-if="navigate === 'Estimate'")
-        h2 Get a free estimate!
+      #estimate(ng-controller="estimateController" ng-if="navigate === 'Estimate'")
+        include ./includes/estimate.pug
 
       #contact(ng-if="navigate === 'Contact'")
         h2 Contact us at (401) 426-7042
         p or by using this form
         form
+
+    footer.container
+      .row
+        .col-md-4
+          h4 Contact Us
+          .col-md-6
+            p (401) 426-7042
+            p E-Mail
+          .col-md-6
+            p Dante's Construction, LLC
+            p 40 Mill Wheel Rd.
+            p Warwick, RI 02886
+        .col-md-2
+        .col-md-4
+          h4 Our Mission
+          .col-md-12
+            p With our attention to detail and dedication to delivering the highest quality work possible, you can rest assured knowing that your project is in the hands of an extremely talented, dedicated and knowledgeable construction team. Serving areas throughout New England.
+
+      .row
+        .col-md-12
+          p 2016 Dante's Construction, LLC. All Rights Reserved.
       //-
       //-   <!-- Controls -->
       //-   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

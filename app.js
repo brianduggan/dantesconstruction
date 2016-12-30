@@ -1,3 +1,4 @@
+// MODULES & MIDDLEWARE
 var express     = require('express'),
     app         = express(),
     morgan      = require('morgan'),
@@ -10,10 +11,16 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 
+// ROUTES
+var estimateRouter = require('./routes/estimate');
+app.use('/estimate', estimateRouter);
+
 app.get('/', function(req,res){
   res.render(__dirname + '/public/views/index');
 });
 
+
+// PORT
 var port = process.env.PORT || 5000;
 
 app.listen(port, function(req,res){
