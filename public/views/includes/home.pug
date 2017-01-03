@@ -1,0 +1,24 @@
+h2#brand-title Dante's Construction
+h4 Dante's Construction is the complete turn-key contractor for all your renovation and construction needs. We work with commercial, residential and municipal clients to exceed expectations and produce quality results. Dante's Construction services Rhode Island as well as other New England states while prodiving the following services:
+  ul
+    li New Construction
+    li Roofing and Exterior
+    li Kitchen and Bathroom
+    li Basement Remodels
+    li Concrete Construction
+
+h4 Our Results
+.row.carousel-container
+  #dantes-carousel.col-md-12
+    #indicator
+    .controls
+      span#prev(ng-click="prev()")
+        i.fa.fa-chevron-left(aria-hidden="true")
+      span#next(ng-click="next()")
+        i.fa.fa-chevron-right(aria-hidden="true")
+    .slide(ng-repeat="serv in ourServ" ng-if="$index === carousel")
+      img(src="{{serv.src}}" alt="{{serv.alt}}")
+      .caption
+        h4 {{serv.capHead}}
+        p {{serv.capBody}}
+        p {{$index}}

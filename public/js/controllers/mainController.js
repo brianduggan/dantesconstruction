@@ -1,6 +1,6 @@
 var mainController = angular.module('mainController', []);
 
-mainController.controller('mainController', ['$scope', '$http', '$interval', '$timeout',function($scope, $http, $interval, $timeout){
+mainController.controller('mainController', ['$scope', '$http', '$interval', '$timeout', '$compile', function($scope, $http, $interval, $timeout, $compile){
   $scope.navigate = 'Home';
 
   var clearActiveNav = function(){
@@ -107,16 +107,14 @@ mainController.controller('mainController', ['$scope', '$http', '$interval', '$t
     var elem = document.querySelector('#indicator');
     var myEl = angular.element(elem);
     var margin = '0 1%';
-    var width = ((98 - (2*(indicators-1)))/indicators) + '%';
+    // var width = ((98 - (2*(indicators-1)))/indicators) + '%';
     for (var i = 0; i < indicators; i++) {
-      var newEl = angular.element('<div class="indicator-bar" data-indicate="'+(i+1)+'"><span>'+i+'</span></div>');
-      console.log(width);
+      var newEl = angular.element('<div class="indicator-bar" data-indicate="'+(i+1)+'"><i class="fa fa-circle" aria-hidden="true"></i></div>');
       newEl.css({
         'display': 'inline-block',
-        'width': width,
         'margin': margin,
-        'background-color': 'red',
-        'border-radius': '5px'
+        'color': 'red',
+        'border-radius': '100%'
       });
       myEl.append(newEl);
       console.log(newEl.html());
@@ -125,18 +123,16 @@ mainController.controller('mainController', ['$scope', '$http', '$interval', '$t
   var newTimeout = $timeout(drawIndicator, 1);
 
   var moveIndicator = function(){
-    console.log('hi');
     var oldEl = angular.element(document.querySelector('.active-indicator'));
     if (oldEl){
       oldEl.removeClass('active-indicator');
-      oldEl.css('background-color', 'red')
+      oldEl.css('color', 'red')
     }
     var el = angular.element( document.querySelector('[data-indicate="'+$scope.indicator+'"]') );
-    console.log(el);
     el.addClass('active-indicator');
-    el.css('background-color', 'black')
+    el.css('color', 'black')
   }
   var newerTimeout = $timeout(moveIndicator, 1);
-  // drawIndicator();
+
 
 }]);

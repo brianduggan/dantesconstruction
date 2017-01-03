@@ -35,22 +35,7 @@ html(lang="en", ng-app="DantesApp")
 
     .container-fluid.main-container
       #home(ng-if="navigate === 'Home'")
-        h2 Dante's Construction
-        h3 Perfection has no competition
-        .row.carousel-container
-          #dantes-carousel.col-md-12
-            #indicator
-            .controls
-              span#prev(ng-click="prev()")
-                i.fa.fa-chevron-left(aria-hidden="true")
-              span#next(ng-click="next()")
-                i.fa.fa-chevron-right(aria-hidden="true")
-            .slide(ng-repeat="serv in ourServ" ng-if="$index === carousel")
-              img(src="{{serv.src}}" alt="{{serv.alt}}")
-              .caption
-                h4 {{serv.capHead}}
-                p {{serv.capBody}}
-                p {{$index}}
+        include ./includes/home.pug
 
       #about(ng-if="navigate === 'About'")
         h2 About Dante's Construction
@@ -65,17 +50,23 @@ html(lang="en", ng-app="DantesApp")
 
     footer.container
       .row
-        .col-md-4
+        .col-md-3
           h4 Contact Us
           .col-md-6
-            p (401) 426-7042
-            p E-Mail
-          .col-md-6
-            p Dante's Construction, LLC
-            p 40 Mill Wheel Rd.
-            p Warwick, RI 02886
-        .col-md-2
-        .col-md-4
+            ul.contact-list
+              li
+                i.fa.fa-phone(aria-hidden="true")
+                span (401) 426-7042
+              li
+                i.fa.fa-envelope-o(aria-hidden="true")
+                span E-Mail
+        .col-md-3
+          h4 Mailing Address
+          ul.mailing-address
+            li Dante's Construction, LLC
+            li 40 Mill Wheel Rd.
+            li Warwick, RI 02886
+        .col-md-6
           h4 Our Mission
           .col-md-12
             p With our attention to detail and dedication to delivering the highest quality work possible, you can rest assured knowing that your project is in the hands of an extremely talented, dedicated and knowledgeable construction team. Serving areas throughout New England.
