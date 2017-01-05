@@ -2,7 +2,7 @@
   width: device-width;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
 
 /******** DEFAULT BODY STYLES ********/
 
@@ -57,7 +57,7 @@ body {
 
 #brand-title {
   text-align: center;
-  font-family: 'Reem Kufi', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   font-weight: bold;
   font-size: 4.5em;
 }
@@ -93,8 +93,7 @@ body {
 
 .controls {
   position: relative;
-  top: 190px;
-  font-size: 4em;
+  font-size: 2em;
   font-weight: lighter;
   color: rgba(255,255,255,0.6);
   text-shadow: 4px 1px 4px rgba(150, 150, 150, 1);
@@ -102,11 +101,15 @@ body {
 
 .controls span#prev {
   position: absolute;
-  left: -1px;
+  background-color: rgba(255,255,255,0.2);
+  border-bottom-right-radius: 50px;
+  padding-right: 1%;
 }
 .controls span#next {
   position: absolute;
-  left: 95%;
+  background-color: rgba(255,255,255,0.2);
+  border-bottom-left-radius: 50px;
+  padding-left: 1%;
 }
 
 // .caption {
