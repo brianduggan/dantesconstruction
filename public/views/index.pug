@@ -10,6 +10,7 @@ html(lang="en")
     link(rel="stylesheet", href="/css/application.css")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
+    script(src="/js/estimate.js")
     script(src="/js/main.js")
     title Dante's Construction
 
@@ -42,8 +43,12 @@ html(lang="en")
               //-    </ul>
 
 
+    #banner
+      h2#brand-title Dante's Construction
+      img(src="/img/garden.jpg")
 
     .container-fluid.main-container
+
       #home()
         include ./includes/home.pug
 
@@ -60,4 +65,5 @@ html(lang="en")
 
     footer.container
         include ./includes/footer.pug
+
 //-end

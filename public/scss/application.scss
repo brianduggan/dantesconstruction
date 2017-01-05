@@ -12,105 +12,118 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-// /******** HEADER STYLES ********/
-// .navbar-header {
-//   margin-top: -10px;
-//   width: 200px;
-// }
-//
-// #logo {
-//   width: 100%;
-//   border-radius: 12px;
-//   padding: 5px;
-// }
-//
-// .nav ul {
-//   font-size: 1.4em;
-//   padding-top: 5px;
-// }
-//
-// #logo:hover,
-// .nav ul li:hover {
-//   cursor: pointer;
-// }
-//
-// .navbar-right {
-//   padding-top: 20px;
-//   padding-right: 10%;
-//   font-style: italic;
-// }
+/******** HEADER STYLES ********/
+.navbar-header {
+  margin-top: -10px;
+  width: 200px;
+}
+
+#logo {
+  width: 100%;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.nav ul {
+  font-size: 1.4em;
+  padding-top: 5px;
+}
+
+#logo:hover,
+.nav ul li:hover {
+  cursor: pointer;
+}
+
+.navbar-right {
+  padding-top: 20px;
+  padding-right: 10%;
+  font-style: italic;
+}
+
+#banner {
+  background-color: lightgrey;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  text-align: center;
+}
+
+#brand-title {
+  color: white;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 1);
+  position: relative;
+  top: 60px;
+  font-size: 4em;
+  z-index: 2;
+}
+
+#banner img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
 
 /******** MAIN CONTAINER POSITION ********/
 .main-container {
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 30%;
   margin-bottom: 20px;
   min-height: 90vh;
   max-width: 90%;
-  background-color: grey;
   border-radius: 5px;
-  // border: 1px solid black;
-  -webkit-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
 }
 
-#brand-title {
-  text-align: center;
-  font-family: 'Archivo Black', sans-serif;
-  font-weight: bold;
-  font-size: 4.5em;
-}
-
-/******** CAROUSEL ********/
-.slide img {
-  width: 100%;
-}
-
-.carousel-container {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#dantes-carousel {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#indicator {
-  padding: 1% 0 3px 0;
-}
-
-.indicator-bar span{
-  visibility: hidden;
-}
-
-.active-indicator {
-  color: black;
-}
-
-.controls {
-  position: relative;
-  font-size: 2em;
-  font-weight: lighter;
-  color: rgba(255,255,255,0.6);
-  text-shadow: 4px 1px 4px rgba(150, 150, 150, 1);
-}
-
-.controls span#prev {
-  position: absolute;
-  background-color: rgba(255,255,255,0.2);
-  border-bottom-right-radius: 50px;
-  padding-right: 1%;
-}
-.controls span#next {
-  position: absolute;
-  background-color: rgba(255,255,255,0.2);
-  border-bottom-left-radius: 50px;
-  padding-left: 1%;
-}
+// /******** CAROUSEL ********/
+// .slide img {
+//   width: 100%;
+// }
+//
+// .carousel-container {
+//   width: 100%;
+//   margin: 0 auto;
+//   text-align: center;
+// }
+//
+// #dantes-carousel {
+//   width: 100%;
+//   margin: 0 auto;
+//   text-align: center;
+// }
+//
+// #indicator {
+//   padding: 1% 0 3px 0;
+// }
+//
+// .indicator-bar span{
+//   visibility: hidden;
+// }
+//
+// .active-indicator {
+//   color: black;
+// }
+//
+// .controls {
+//   position: relative;
+//   font-size: 2em;
+//   font-weight: lighter;
+//   color: rgba(255,255,255,0.6);
+//   text-shadow: 4px 1px 4px rgba(150, 150, 150, 1);
+// }
+//
+// .controls span#prev {
+//   position: absolute;
+//   background-color: rgba(255,255,255,0.2);
+//   border-bottom-right-radius: 50px;
+//   padding-right: 1%;
+// }
+// .controls span#next {
+//   position: absolute;
+//   background-color: rgba(255,255,255,0.2);
+//   border-bottom-left-radius: 50px;
+//   padding-left: 1%;
+// }
 
 // .caption {
 //   position: relative;

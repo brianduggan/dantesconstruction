@@ -1,6 +1,6 @@
 h2 Get a free estimate!
 .estimate-form.container
-  form(ng-submit="sendEstimate()")
+  form#estimate-form()
     .row
       .col-md-4
         label(for="estimate-first") First Name
@@ -31,31 +31,34 @@ h2 Get a free estimate!
     .row
       .col-md-4
         label(for="estimate-city") City
-        input(type="text" id="estimate-city" ng-model="estimate.city")
+        input(type="text" id="estimate-city")
         p Example: Warwick
-    select(ng-model="estimate.state")
+    select(id="estimate-state")
       option(value="") State
       option(value="RI") RI
       option(value="MA") MA
     .row
+      label(for="estimate-message") Message (i.e. what you want done)
+      textarea(id="estimate-message")
+    .row.work-type
       h3 Type of Work
       .row
         .col-md-4
           label() New Construction
-            input(type="checkbox" value="New Construction" ng-model="estimate.type.newconstruction")
+            input(type="checkbox" value="New Construction")
       .row
         .col-md-4
           label() Kitchen & Bathroom
-            input(type="checkbox" value="Kitchen & Bathroom" ng-model="estimate.type.kitchbath")
+            input(type="checkbox" value="Kitchen & Bathroom")
       .row
         .col-md-4
           label() Basement Remodels
-            input(type="checkbox" value="Basement Remodels" ng-model="estimate.type.basement")
+            input(type="checkbox" value="Basement Remodels")
       .row
         .col-md-4
           label() Concrete Construction
-            input(type="checkbox" value="Concrete Construction" ng-model="estimate.type.concrete")
-    .row
+            input(type="checkbox" value="Concrete Construction")
+    .row.contact-time
       h3 Contact Time
       .row
         .col-md-4
@@ -73,7 +76,7 @@ h2 Get a free estimate!
         .col-md-4
           label() Anytime
             input(type="checkbox" value="Anytime" ng-model="estimate.time.anytime")
-    .row
+    .row.project-status
       h3 Project Status
       .row
         .col-md-4

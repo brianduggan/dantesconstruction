@@ -10,11 +10,12 @@ var express     = require('express'),
                   });
 
 router.post('/', function(req,res){
+  var estimate = req.body;
   var mailOptions = {
-    from: req.body.firstname + ' ' + req.body.lastname + ' <'+req.body.email+'>',
+    from: estimate.firstname + ' ' + estimate.lastname + ' <'+estimate.email+'>',
     to: 'brian.e.duggan@icloud.com',
     subject: 'Estimate',
-    text: req.body.firstname
+    html: '<style> span {font-weight: normal;}</style><body><h1> Dante\'s Construction </h1><h2> Estimate </h2><h4> From: ' + estimate.firstname + ' ' + estimate.lastname +  '<h4> Email: ' + estimate.email + '</h4><h4> Address: <span>'+ estimate.street + ', ' + estimate.street2 + ', ' + estimate.city + ', ' + estimate.state + '</span></h4><h4>For: <span>' + estimate.workType + '</span></h4><h4>Project Status: <span>'+ estimate.projectStatus +'</span></h4><h4>Message: <span>'+ estimate.message+'</span></h4><h4>Best Time to Contact: <span>'+ estimate.contactTime+'</h4><h4>Phone: <span>'+ estimate.phone+'</span></h4></body>'
   };
   console.log(mailOptions);
   transporter.sendMail(mailOptions, function(err, info){
