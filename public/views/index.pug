@@ -29,11 +29,11 @@ html(lang="en")
           #dantes-navbar.collapse.navbar-collapse
             ul.nav.navbar-nav
               li#about-nav
-                a() About
+                a(href="#about") About
               li#estimate-nav
-                a() Estimate
+                a(href="#estimate") Estimate
               li#contact-nav
-                a() Contact
+                a(href="#contact") Contact
             //- .navbar-right
             //-   p Perfection has no competition
               //- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,26 +42,19 @@ html(lang="en")
               //-      <li><a href="#">Link</a></li>
               //-    </ul>
 
+    #home()
+      include ./includes/home.pug
 
-    #banner
-      h2#brand-title Dante's Construction
-      img(src="/img/garden.jpg")
+    #about.section-container()
+      include ./includes/about.pug
 
-    .container-fluid.main-container
+    #estimate.section-container()
+      include ./includes/estimate.pug
 
-      #home()
-        include ./includes/home.pug
-
-      #about()
-        h2 About Dante's Construction
-
-      #estimate()
-        include ./includes/estimate.pug
-
-      #contact(ng-if="navigate === 'Contact'")
-        h2 Contact us at (401) 426-7042
-        p or by using this form
-        form
+    #contact.section-container
+      h2 Contact us at (401) 426-7042
+      p or by using this form
+      form
 
     footer.container
         include ./includes/footer.pug
