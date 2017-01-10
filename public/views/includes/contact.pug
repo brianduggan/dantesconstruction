@@ -1,0 +1,21 @@
+.text-container
+  h2 Contact us at (401) 426-7042
+  p or by using this form
+  form.form-horizontal
+    .form-group
+      label.col-sm-1(for="contact-name") Name
+      .col-sm-6
+        input(type="text" id="contact-name" placeholder="Name")
+    .form-group
+      label.col-sm-1(for="contact-email") E-Mail
+      .col-sm-6
+        input(type="email" id="contact-email" placeholder="E-Mail")
+    .form-group
+      label.col-sm-1(for="contact-subject") Subject
+      .col-sm-6
+        input(type="text" id="contact-subject" placeholder="Subject")
+    .form-group
+      label.col-sm-1(for="contact-message") Message
+      .col-sm-6
+        textarea(id="contact-message" placeholder="Message")
+    button.btn.btn-success Submit Message
