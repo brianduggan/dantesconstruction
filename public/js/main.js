@@ -28,7 +28,7 @@ var ourServ = [
   {
     src: 'http://www.fillmurray.com/802/405',
     capHead: 'Concrete Construction',
-    capBody: 'Patios? Driveways? Basketball Court?',
+    capBody: 'Patios? Driveways? Basketball Court? Done.',
     alt: 'conrete-construction'
   }
 ];
